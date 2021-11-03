@@ -1,5 +1,5 @@
 <script>
-    pagination()
+    showLearnMore()
 
     document.querySelectorAll('.pagination')[0].querySelector('.prev').addEventListener("click", pagination);
     document.querySelectorAll('.pagination')[0].querySelector('.next').addEventListener("click", pagination);
