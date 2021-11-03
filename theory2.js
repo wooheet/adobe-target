@@ -1,4 +1,4 @@
-<head>
+
     <style>
         a.btn.btn-outline-secondary.btn-lg.where-to-buy {
             -webkit-text-size-adjust: 100%;
@@ -59,4 +59,4 @@
             margin-top: 10px;
         }
     </style>
-</head>
+

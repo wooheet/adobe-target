@@ -1,4 +1,4 @@
-<head>
+
     <style>
         a.btn.btn-outline-secondary.btn-lg.where-to-buy {
         -webkit-text-size-adjust: 100%;
@@ -59,7 +59,7 @@
         margin-top: 10px;
     }
 
-        a.btn.btn-outline-secondary.btn-lg.product-enquiry {
+    a.btn.btn-outline-secondary.btn-lg.product-enquiry {
         -webkit-text-size-adjust: 100%;
         -webkit-tap-highlight-color: transparent;
         --blue: #007bff;
@@ -105,7 +105,6 @@
         white-space: normal;
         display: inline-block;
         vertical-align: top;
-        margin-left: 4.984424%;border: 0;
         outline: 0;
         padding: 13px 29px 14px;
         text-decoration: none;
@@ -126,4 +125,4 @@
         document.querySelector('.relation-area').querySelector('.wishlist-compare').querySelector('a.link-text.ico-compare.js-compare').appendChild(document.querySelector('a.btn.btn-outline-secondary.btn-lg.product-enquiry'))
         document.querySelector('.pdp-info.visible-xs.mobile-bottom-info').querySelector('.wishlist-compare').querySelector('a.link-text.ico-compare.js-compare').appendChild(document.querySelector('a.btn.btn-outline-secondary.btn-lg.product-enquiry'))
     </script>
-</head>
+
