@@ -177,7 +177,12 @@
 
     </style>
     <script>
-        document.querySelector('.pdp-info.visible-xs.mobile-bottom-info').querySelector('.wishlist-compare').appendChild(document.querySelector('a.btn.btn-outline-secondary.btn-lg.product-enquiry'))
-        document.querySelector('.relation-area').querySelector('.wishlist-compare').appendChild(document.querySelector('a.btn.btn-outline-secondary.btn-lg.product-enquiry'))
+        var pe = document.querySelector('.relation-area').querySelector('.wishlist-compare').querySelector('a.btn.btn-outline-secondary.btn-lg.product-enquiry')
+        pe.parentElement.removeChild(pe)
+        var mpe = document.querySelector('.pdp-info.visible-xs.mobile-bottom-info').querySelector('.wishlist-compare').querySelector('a.btn.btn-outline-secondary.btn-lg.product-enquiry')
+        mpe.parentElement.removeChild(mpe)
+
+        document.querySelector('.relation-area').querySelector('.wishlist-compare').querySelector('a.link-text.ico-compare.js-compare').appendChild(document.querySelector('a.btn.btn-outline-secondary.btn-lg.product-enquiry'))
+        document.querySelector('.pdp-info.visible-xs.mobile-bottom-info').querySelector('.wishlist-compare').querySelector('a.link-text.ico-compare.js-compare').appendChild(document.querySelector('a.btn.btn-outline-secondary.btn-lg.product-enquiry'))
     </script>
 </head>
