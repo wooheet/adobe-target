@@ -1,9 +1,9 @@
 <script>
     showLearnMore()
 
-    document.querySelectorAll('.pagination')[0].querySelector('.prev').addEventListener("click", pagination);
-    document.querySelectorAll('.pagination')[0].querySelector('.next').addEventListener("click", pagination);
-    document.querySelectorAll('.pagination')[0].querySelector('ul').addEventListener("click", pagination);
+    document.querySelectorAll('.pagination')[0].querySelector('.prev').addEventListener("click", showLearnMore);
+    document.querySelectorAll('.pagination')[0].querySelector('.next').addEventListener("click", showLearnMore);
+    document.querySelectorAll('.pagination')[0].querySelector('ul').addEventListener("click", showLearnMore);
 
     function showLearnMore() {
         var wtb_emt = document.querySelectorAll('a.btn.btn-outline-secondary.btn-sm.where-to-buy.active');
@@ -13,18 +13,16 @@
         }
     }
 
-    function pagination() {
-        var i = 0;
-        var wtb_emt = document.querySelectorAll('a.btn.btn-outline-secondary.btn-sm.where-to-buy.active');
-        while (i < wtb_emt.length) {
-            if (wtb_emt[wtb_emt.length].innerText !== "learn more".toUpperCase()) {
-            break;
-        }
-            wtb_emt[i].innerText = "learn more"
-            wtb_emt[i].href = document.querySelectorAll('p.model-name a')[i].href
-            i++;
-        }
-    }
+
+    (function($) {
+        $(document).ajaxSuccess(function( event, xhr, settings ) {
+            showLearnMore();
+            console.log({
+                'event': 'ajaxSuccess',
+                'eventCategory': 'AJAX ' + settings.type,
+                'eventAction': settings.url + (settings.type == 'POST' && settings.data ? ';' + settings.data : ''),
+                'eventLabel': xhr.responseText
+            });
+        });
+    })(jQuery);
 </script>
-
-
