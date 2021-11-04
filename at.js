@@ -396,3 +396,135 @@ document.querySelector('.relation-area').querySelector('.wishlist-compare').appe
 
 
 
+
+
+
+
+adobe.target.getOffer({
+    mbox: 'target-global-mbox',
+    success: function(offer) {
+        adobe.target.applyOffer({
+            mbox: 'target-global-mbox',
+            offer: offer
+        });
+
+        showLearnMore()
+
+        document.querySelectorAll('.pagination')[0].querySelector('.prev').addEventListener("click", pagination);
+        document.querySelectorAll('.pagination')[0].querySelector('.next').addEventListener("click", pagination);
+        document.querySelectorAll('.pagination')[0].querySelector('ul').addEventListener("click", pagination);
+
+        function showLearnMore() {
+            var wtb_emt = document.querySelectorAll('a.btn.btn-outline-secondary.btn-sm.where-to-buy.active');
+            for (var i = 0; i < wtb_emt.length; i++) {
+                wtb_emt[i].innerText = "learn more"
+                wtb_emt[i].href = document.querySelectorAll('p.model-name a')[i].href
+            }
+        }
+
+        function pagination() {
+            var i = 0;
+            var wtb_emt = document.querySelectorAll('a.btn.btn-outline-secondary.btn-sm.where-to-buy.active');
+            while (i < wtb_emt.length) {
+                if (wtb_emt[wtb_emt.length].innerText !== "learn more".toUpperCase()) {
+                    break;
+                }
+                wtb_emt[i].innerText = "learn more"
+                wtb_emt[i].href = document.querySelectorAll('p.model-name a')[i].href
+                i++;
+            }
+        }
+    },
+    error: function() {
+        console.log("fail get offer")
+    }
+});
+
+
+
+adobe.target.getOffer({
+    mbox: 'target-global-mbox',
+    success: function(offer) {
+        adobe.target.applyOffer({
+            mbox: 'target-global-mbox',
+            offer: offer
+        });
+
+        showLearnMore()
+
+        document.querySelectorAll('.pagination')[0].querySelector('.prev').addEventListener("click", pagination);
+        document.querySelectorAll('.pagination')[0].querySelector('.next').addEventListener("click", pagination);
+        document.querySelectorAll('.pagination')[0].querySelector('ul').addEventListener("click", pagination);
+
+        function showLearnMore() {
+            var buynow_emt = document.querySelectorAll('a.btn.btn-outline-secondary.btn-sm.where-to-buy.active');
+            for (var i = 0; i < buynow_emt.length; i++) {
+                buynow_emt[i].innerText = "learn more"
+                buynow_emt[i].href = document.querySelectorAll('p.model-name a')[i].href
+            }
+        }
+
+        function pagination() {
+            var i = 0;
+            var buynow_emt = document.querySelectorAll('a.btn.btn-outline-secondary.btn-sm.where-to-buy.active');
+            while (i < buynow_emt.length) {
+                if (buynow_emt[buynow.length].innerText === "learn more".toUpperCase()) {
+                    break;
+                }
+                buynow_emt[i].innerText = "learn more"
+                buynow_emt[i].href = document.querySelectorAll('p.model-name a')[i].href
+                i++;
+            }
+        }
+    },
+    error: function() {
+        console.log("fail get offer")
+    }
+});
+
+
+
+adobe.target.getOffer({
+    mbox: 'target-global-mbox',
+    success: function(offer) {
+        adobe.target.applyOffer({
+            mbox: 'target-global-mbox',
+            offer: offer
+        });
+
+        document.querySelectorAll('.pagination')[0].querySelector('.prev').addEventListener("click", paginationtest);
+        document.querySelectorAll('.pagination')[0].querySelector('.next').addEventListener("click", paginationtest);
+        document.querySelectorAll('.pagination')[0].querySelector('ul').addEventListener("click", paginationtest);
+
+        function paginationtest() {
+            console.log("lg at")
+        }
+    },
+    error: function() {
+        console.log("fail get offer")
+    }
+});
+
+
+
+
+adobe.target.getOffer({
+    mbox: 'target-global-mbox',
+    success: function(offer) {
+        adobe.target.applyOffer({
+            mbox: 'target-global-mbox',
+            offer: offer
+        });
+
+        function getAtOffer() {
+            console.log("lg at")
+        }
+    },
+    error: function() {
+        console.log("fail get offer")
+    }
+});
+
+
+
+
