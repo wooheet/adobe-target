@@ -1,3 +1,4 @@
+//Apply custom code offer to at.js 
 <script>
     adobe.target.getOffer({
         mbox: 'target-global-mbox',
